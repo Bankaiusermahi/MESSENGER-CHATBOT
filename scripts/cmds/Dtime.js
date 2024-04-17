@@ -21,10 +21,10 @@ onStart: async function ({ api, event, message }) {
     const senderID = event.senderID;
     
     const loadingMessage = await message.reply({
-      body: "Please wait🐸",
+      body: "Please wait🙂🙏🙂",
     });
     
-     const frog = await global.utils.getStreamFromURL( "https://ibb.co/XznHxZd/image.jpg");
+     const frog = await global.utils.getStreamFromURL( "https://i.ibb.co/cFhc1my/4x9cfdbdpth81.gif");
      
      const now = moment();
      const d = now.format('DD-MMMM');
