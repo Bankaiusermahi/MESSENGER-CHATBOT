@@ -12,7 +12,7 @@ const fs = require("fs");
         module.exports = {
           config: {
             name: 'openai',
-            aliases : ['ai'],
+            aliases : ['gin'],
             version: '1.0',
             author: 'Aryan Chauhan & ADD YOUR NAME HERE', //don't Change my credit if you change it i will ban your IP so don't do it.
             role: 0,
