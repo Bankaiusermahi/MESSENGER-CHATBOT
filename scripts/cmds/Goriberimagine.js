@@ -2,7 +2,7 @@ const axios = require('axios');
 
 module.exports = {
   config: {
-    name: "imaginexx",
+    name: "imagine",
     version: "1.1",
     author: "MR.AYAN + CLIFF", // api yange
     countDown: 10,
