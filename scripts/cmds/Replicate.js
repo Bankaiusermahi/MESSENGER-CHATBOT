@@ -4,8 +4,8 @@ const axios = require("axios");
 
 module.exports = {
   config: {
-    name: "imagine",
-    aliases: [shikamaru],
+    name: "replicate",
+    aliases: [],
     author: "Vex-Kshitiz",
     version: "1.0",
     cooldowns: 20,
