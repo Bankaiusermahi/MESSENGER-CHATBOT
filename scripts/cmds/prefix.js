@@ -1,5 +1,5 @@
 const fs = require("fs-extra");
-const gif = [""];
+const gif = ["https://i.ibb.co/Z61Fh9C/GIFMaker-me-1.gif"];
 const upolGif = gif[Math.floor(Math.random() * gif.length)];
 const { utils } = global;
 
