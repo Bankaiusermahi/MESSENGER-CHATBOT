@@ -1,4 +1,3 @@
-- //** help cmd real owner fb I'd : https://m.me/MR.AYAN.2X  **//
 const fs = require("fs-extra");
 const axios = require("axios");
 const path = require("path");
@@ -10,7 +9,7 @@ module.exports = {
   config: {
     name: "help",
     version: "1.17",
-    author: "Mohammad Ayan", // original author AYAN
+    author: " MR.AYAN", // original author AYAN
     countDown: 0,
     role: 0,
     shortDescription: {
@@ -63,8 +62,18 @@ module.exports = {
       const totalCommands = commands.size;
       msg += `\n𝗧𝗢𝗧𝗔𝗟 𝙲𝚖𝚍 ${totalCommands}\n𝚌𝚘𝚖𝚖𝚊𝚗𝚍 𝚝𝚑𝚊 𝚞 𝚌𝚊𝚗 𝚞𝚜𝚎`;
       msg += `𝚝𝚢𝚙𝚎: 「${prefix} 𝗵𝗲𝗹𝗽」+「 𝐇𝐄𝐋𝐏 𝐂𝐌𝐃」𝚝𝚘 𝚟𝚒𝚎𝚠 𝚍𝚎𝚝𝚊𝚒𝚕𝚜 𝚘𝚏 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜\n`;
-      msg += `👑 | MAHI`; // its not decoy so change it if you want 
- helpListImages[Math.floor(Math.random() * helpListImages.length)];
+      msg += `👑 | Ayan`; // its not decoy so change it if you want 
+
+      const helpListImages = [
+        "https://i.imgur.com/FG50jv0.gif", // don't change imgur
+        "https://i.imgur.com/myZNdXU.gif",
+        "https://i.imgur.com/FG50jv0.gif",
+        "https://i.imgur.com/myZNdXU.gif",
+        "https://i.imgur.com/FG50jv0.gif",
+        // don't change imgur
+      ];
+
+      const helpListImage = helpListImages[Math.floor(Math.random() * helpListImages.length)];
 
       await message.reply({
         body: msg,
@@ -120,4 +129,4 @@ function roleTextToString(roleText) {
     default:
       return "Unknown role";
   }
-            }
+      }
