@@ -34,7 +34,7 @@ module.exports = {
       const categories = {};
       let msg = "";
 
-      msg += `╔═════▓࿇࿇▓═════╗\n             𝐀𝐋𝐋 𝐂𝐌𝐃 𝐋𝐈𝐒𝐓\n╚═════▓࿇࿇▓═════╝\n\n`; // replace with your name 
+      msg += `╔═════▓࿇࿇▓═════╗\n             𝐀𝐋𝐋 𝐂𝐌𝐃 𝐋𝐈𝐒𝐓 𝗜𝗡 𝗠𝗔𝗛𝗜'𝗦 𝔅𝔞𝔫𝔨𝔞𝔦 𝔟𝔬𝔱 𝗕𝗢𝗧\n╚═════▓࿇࿇▓═════╝\n\n`; // replace with your name 
 
       for (const [name, value] of commands) {
         if (value.config.role > 1 && role < value.config.role) continue;
@@ -55,14 +55,14 @@ module.exports = {
             msg += `\n ${cmds.join(" ".repeat(Math.max(1, 10 - cmds.join("").length)))}`;
           }
 
-          msg += ``;
+          msg += `𝐓𝐇𝐀𝐍𝐊𝐒 𝐅𝐎𝐑 𝐔𝐒𝐈𝐍𝐆 𝐋𝐎𝐑𝐃 𝐀𝐈𝐙𝐄𝐍 𝐉𝐑'𝐒 𝐁𝐎𝐓 𝐖𝐄'𝐋𝐋 𝐂𝐎𝐌𝐄 𝐖𝐈𝐓𝐇 𝐍𝐄𝐖 𝐔𝐏𝐃𝐀𝐓𝐄 𝐄𝐕𝐄𝐑𝐘 𝐖𝐄𝐄𝐊`;
         }
       });
 
       const totalCommands = commands.size;
       msg += `\n𝗧𝗢𝗧𝗔𝗟 𝙲𝚖𝚍 ${totalCommands}\n𝚌𝚘𝚖𝚖𝚊𝚗𝚍 𝚝𝚑𝚊 𝚞 𝚌𝚊𝚗 𝚞𝚜𝚎`;
       msg += `𝚝𝚢𝚙𝚎: 「${prefix} 𝗵𝗲𝗹𝗽」+「 𝐇𝐄𝐋𝐏 𝐂𝐌𝐃」𝚝𝚘 𝚟𝚒𝚎𝚠 𝚍𝚎𝚝𝚊𝚒𝚕𝚜 𝚘𝚏 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜\n`;
-      msg += `👑 | Ayan`; // its not decoy so change it if you want 
+      msg += `👑 | LORD AIZEN JR (MAHI)`; // its not decoy so change it if you want 
 
       const helpListImages = [
         "https://i.imgur.com/FG50jv0.gif", // don't change imgur
@@ -95,7 +95,7 @@ module.exports = {
         const guideBody = configCommand.guide?.en || "No guide available.";
         const usage = guideBody.replace(/{p}/g, prefix).replace(/{n}/g, configCommand.name);
 
-        const response = `╭── NAME ────⭓
+        const response = `╭── NAME - høpéléss mâhî────⭓
   │ ${configCommand.name}
   ├── INFO
   │ Description: ${longDescription}
