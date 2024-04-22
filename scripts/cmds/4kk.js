@@ -1,54 +1,52 @@
+const a = require('axios');
+const tinyurl = require('tinyurl');
+
 module.exports = {
   config: {
-    name: "4k",
-    version: "0.0.1",
-    author: "DC-Nam",
-    description: {
-      en: "Increase image quality to 4K",
-    },
-    commandCategory: {
-      en: "Images",
-    },
-    usage: "[image]",
-    cooldowns: 3,
+    name: "upscaleai",
+    aliases: ["4k", "upscale"],
+    version: "1.0",
+    author: "JARiF",
+    countDown: 15,
+    role: 0,
+    longDescription: "Upscale your image.",
+    category: "utility",
+    guide: {
+      en: "{pn} reply to an image"
+    }
   },
 
-  langs: {
-    en: {
-      replyPhoto: "Please reply with 1 photo!",
-      increaseResolution: "Increasing the resolution for {count} image(s) ({time}s)",
-      successful: "Successful ({time}s)",
-    },
-  },
+  onStart: async function ({ message, args, event, api }) {
+    let imageUrl;
 
-  onStart: async function ({ api, event, getLang }) {
-    let send = (msg) => api.sendMessage(msg, event.threadID, event.messageID);
+    if (event.type === "message_reply") {
+      const replyAttachment = event.messageReply.attachments[0];
 
-    if (event.type != "message_reply") return send(getLang("replyPhoto"));
-
-    send(getLang("increaseResolution", { count: event.messageReply.attachments.length, time: event.messageReply.attachments.length * 3 }));
-
-    let stream = [];
-    let exec_time = 0;
-
-    for (let i of event.messageReply.attachments) {
-      try {
-        let res = await require("axios").get(encodeURI(`https://nams.live/upscale.png?{"image":"${i.url}","model":"4x-UltraSharp"}`), {
-          responseType: "stream",
-        });
-
-        exec_time += +res.headers.exec_time;
-        const eta = (res.headers.exec_time / 1000) << 0;
-
-        res.data.path = "tmp.png";
-        stream.push(res.data);
-      } catch (e) {}
+      if (["photo", "sticker"].includes(replyAttachment?.type)) {
+        imageUrl = replyAttachment.url;
+      } else {
+        return api.sendMessage(
+          { body: "❌ | Reply must be an image." },
+          event.threadID
+        );
+      }
+    } else if (args[0]?.match(/(https?:\/\/.*\.(?:png|jpg|jpeg))/g)) {
+      imageUrl = args[0];
+    } else {
+      return api.sendMessage({ body: "❌ | Reply to an image." }, event.threadID);
     }
 
-    send({
-      body: getLang("successful", { time: (exec_time / 1000) << 0 }),
-      attachment: stream,
-    });
-  },
+    try {
+      const url = await tinyurl.shorten(imageUrl);
+      const k = await a.get(`https://www.api.vyturex.com/upscale?imageUrl=${url}`);
+
+      message.reply("✅ | Please wait...");
+
+      const resultUrl = k.data.resultUrl;
+
+      message.reply({ body: "✅ | Image Upscaled.", attachment: await global.utils.getStreamFromURL(resultUrl) });
+    } catch (error) {
+      message.reply("❌ | Error: " + error.message);
+    }
+  }
 };
-        
