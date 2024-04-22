@@ -2,7 +2,7 @@ module.exports = {
  config: {
  name: "mahi",
  version: "1.0",
- author: "leeza", // xue editz
+ author: "mahi", // xue editz
  countDown: 5,
  role: 0,
  shortDescription: "no prefix",
