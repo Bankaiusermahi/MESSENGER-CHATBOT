@@ -32,16 +32,16 @@ module.exports = {
           hobby: ' COMPARING AND TOXICITY  ',
           relationship: 'THERE IS A GIRL I WANT TO MARRY IN FUTURE!',
           facebookLink: ' https://www.facebook.com/profile.php?id=100072881080249',
-          bio: '𝙏𝙤 𝙢𝙖𝙠𝙚 𝙛𝙪𝙣'
+          bio: 'ONE DAY I'LL BECOME LIKE LORD AIZEN'
         };
 
         const videoUrl = 
-["https://i.imgur.com/kSVZkHH.mp4",
-"https://i.imgur.com/Ebj77tA.mp4",
-"https://i.imgur.com/5y3yaQQ.mp4",
-"https://i.imgur.com/kDKmrsw.mp4",
-"https://i.imgur.com/gYGp3WW.mp4",
-"https://i.imgur.com/qqT3YRF.mp4",
+["https://i.imgur.com/KzwgUW9.mp4",
+"https://i.imgur.com/wwYdJKf.mp4",
+"https://i.imgur.com/vcffz8j.mp4",
+"https://i.imgur.com/azNOwTe.mp4",
+"https://i.imgur.com/pVYJ25b.mp4",
+"https://i.imgur.com/vHwbgQJ.mp4",
  ];
         const tmpFolderPath = path.join(__dirname, 'tmp');
 
