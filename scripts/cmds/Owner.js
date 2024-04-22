@@ -21,10 +21,10 @@ config: {
       age: '16+',
       HOBBY: 'WATCHING ANIME AND BUILDING BOTS',
       facebookLink: 'https://www.facebook.com/100072881080249',
-      nick: 'Mr SANNY'
+      nick: 'YHWACH/LORD AIZEN'
     };
 
-    const bold = 'https://i.imgur.com/DDO686J.mp4'; // Replace with your Google Drive videoid link https://drive.google.com/uc?export=download&id=here put your video id
+    const bold = 'https://i.ibb.co/GpkZrWV/images-18.jpg'; // Replace with your Google Drive videoid link https://drive.google.com/uc?export=download&id=1FX279zNSCoKEtfzvYzX3DDnotbVoL24e put your video id
 
     const tmpFolderPath = path.join(__dirname, 'tmp');
 
