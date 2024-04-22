@@ -42,7 +42,7 @@ Owner Information:🧾
 Name: ${ownerInfo.name}
 Gender: ${ownerInfo.gender}
 Age: ${ownerInfo.age}
-Height: ${ownerInfo.height}
+Hobby: ${ownerInfo.HOBBY}
 Facebook: ${ownerInfo.facebookLink}
 Nick: ${ownerInfo.nick}
 `;
